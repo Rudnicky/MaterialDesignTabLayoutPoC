@@ -7,6 +7,12 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final int[] ICONS = new int[] {
+        R.drawable.img_sad_cloud,
+        R.drawable.img_snowflake,
+        R.drawable.img_storm
+    };
+
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -20,12 +26,17 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         // Adding fragments
-        adapter.addFragment(new FirstFragment(), "firstFragment");
-        adapter.addFragment(new SecondFragment(), "secondFragment");
-        adapter.addFragment(new ThirdFragment(), "thirdFragment");
+        adapter.addFragment(new FirstFragment(), "Today");
+        adapter.addFragment(new SecondFragment(), "5 Days");
+        adapter.addFragment(new ThirdFragment(), "By City");
 
         // Setting up Adapter
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        // Adding images
+        tabLayout.getTabAt(0).setIcon(ICONS[0]);
+        tabLayout.getTabAt(1).setIcon(ICONS[1]);
+        tabLayout.getTabAt(2).setIcon(ICONS[2]);
     }
 }
