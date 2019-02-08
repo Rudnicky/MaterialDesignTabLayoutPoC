@@ -1,9 +1,15 @@
-package com.example.materialdesigntablayoutpoc;
+package com.example.materialdesigntablayoutpoc.activities;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.materialdesigntablayoutpoc.R;
+import com.example.materialdesigntablayoutpoc.adapters.ViewPagerAdapter;
+import com.example.materialdesigntablayoutpoc.fragments.FirstFragment;
+import com.example.materialdesigntablayoutpoc.fragments.SecondFragment;
+import com.example.materialdesigntablayoutpoc.fragments.ThirdFragment;
 
 public class MainActivity extends AppCompatActivity {
 
